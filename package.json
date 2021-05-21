@@ -1,8 +1,8 @@
 {
   "name": "react-native-utils-toolkit",
   "title": "React Native Utils Toolkit",
-  "version": "0.1.0",
-  "description": "TODO",
+  "version": "1.0.0",
+  "description": "React Native Utils Toolkit",
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,7 +15,6 @@
   "keywords": [
     "react-native",
     "scale",
-    "scalable",
     "check-tablet",
     "check-small-device",
     "has-notch",
