@@ -13,16 +13,17 @@
     import React from 'react';
     import {SafeAreaView, ScrollView, StyleSheet, Text, View} from 'react-native';
     import {useDetectDevice, useScale} from 'react-native-utils-toolkit';
+    
     const {scale, fontScale} = useScale;
     const {
-    deviceInch,
-    hasNotch,
-    height,
-    width,
-    isAndroid,
-    isIOS,
-    isSmallDevice,
-    isTablet,
+        deviceInch,
+        hasNotch,
+        height,
+        width,
+        isAndroid,
+        isIOS,
+        isSmallDevice,
+        isTablet,
     } = useDetectDevice;
 
     const App = () => {
