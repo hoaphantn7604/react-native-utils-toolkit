@@ -27,7 +27,7 @@ const App = () => {
         <Text style={styles.fontScale}>
           isSmallDevice: {isSmallDevice.toString()}
         </Text>
-        <View style={[styles.box, styles.scale]}>
+        <View style={styles.box}>
           <Text style={[styles.color, {fontSize: fontScale(14)}]}>150x150</Text>
           <Text style={[styles.color, {fontSize: fontScale(14)}]}>
             Scale: {scale(150)}x{scale(150)}
@@ -48,16 +48,12 @@ const styles = StyleSheet.create({
     fontSize: fontScale(16),
   },
   box: {
-    width: 150,
-    height: 150,
+    width: scale(150),
+    height: scale(150),
     backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
     margin: 16,
-  },
-  scale: {
-    width: scale(150),
-    height: scale(150),
   },
   color: {
     color: 'white',
