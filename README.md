@@ -27,26 +27,26 @@
     } = useDetectDevice;
 
     const App = () => {
-    return (
-        <ScrollView>
-            <SafeAreaView style={styles.container}>
-                <Text style={styles.fontScale}>Device width: {width}</Text>
-                <Text style={styles.fontScale}>Device height: {height}</Text>
-                <Text style={styles.fontScale}>Device inch: {deviceInch}</Text>
-                <Text style={styles.fontScale}>isAndroid: {isAndroid.toString()}</Text>
-                <Text style={styles.fontScale}>isIOS: {isIOS.toString()}</Text>
-                <Text style={styles.fontScale}>hasNotch: {hasNotch.toString()}</Text>
-                <Text style={styles.fontScale}>isTablet: {isTablet.toString()}</Text>
-                <Text style={styles.fontScale}>isSmallDevice: {isSmallDevice.toString()}</Text>
-                <View style={styles.box}>
-                    <Text style={[styles.color, {fontSize: fontScale(14)}]}>150x150</Text>
-                    <Text style={[styles.color, {fontSize: fontScale(14)}]}>
-                        Scale: {scale(150)}x{scale(150)}
-                    </Text>
-                </View>
-            </SafeAreaView>
-        </ScrollView>
-    );
+        return (
+            <ScrollView>
+                <SafeAreaView style={styles.container}>
+                    <Text style={styles.fontScale}>Device width: {width}</Text>
+                    <Text style={styles.fontScale}>Device height: {height}</Text>
+                    <Text style={styles.fontScale}>Device inch: {deviceInch}</Text>
+                    <Text style={styles.fontScale}>isAndroid: {isAndroid.toString()}</Text>
+                    <Text style={styles.fontScale}>isIOS: {isIOS.toString()}</Text>
+                    <Text style={styles.fontScale}>hasNotch: {hasNotch.toString()}</Text>
+                    <Text style={styles.fontScale}>isTablet: {isTablet.toString()}</Text>
+                    <Text style={styles.fontScale}>isSmallDevice: {isSmallDevice.toString()}</Text>
+                    <View style={styles.box}>
+                        <Text style={[styles.color, {fontSize: fontScale(14)}]}>150x150</Text>
+                        <Text style={[styles.color, {fontSize: fontScale(14)}]}>
+                            Scale: {scale(150)}x{scale(150)}
+                        </Text>
+                    </View>
+                </SafeAreaView>
+            </ScrollView>
+        );
     };
 
     const styles = StyleSheet.create({
@@ -64,7 +64,7 @@
             backgroundColor: 'black',
             alignItems: 'center',
             justifyContent: 'center',
-            margin: 16,
+            margin: scale(16),
         },
         color: {
             color: 'white',

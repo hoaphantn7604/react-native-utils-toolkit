@@ -8,7 +8,7 @@ export interface UseDetectDevice {
     isSmallDevice: boolean;
     isAndroid: boolean;
     isIOS: boolean;
-    hasNotch: ()=> boolean;
+    hasNotch: boolean;
     deviceInch: number;
     width: number;
     height: number;
