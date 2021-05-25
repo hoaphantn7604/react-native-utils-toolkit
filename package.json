@@ -18,7 +18,8 @@
     "check-tablet",
     "check-small-device",
     "has-notch",
-    "device-inch"
+    "device-inch",
+    "device-orientation"
   ],
   "author": {
     "name": "Hoa Phan",

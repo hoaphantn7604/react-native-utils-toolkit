@@ -1,6 +1,6 @@
 import React from 'react';
 import {SafeAreaView, ScrollView, StyleSheet, Text, View} from 'react-native';
-import {useDetectDevice, useScale} from 'react-native-utils-toolkit';
+import {useDetectDevice, useScale, useDeviceOrientation} from 'react-native-utils-toolkit';
 const {scale, fontScale} = useScale;
 const {
   deviceInch,
@@ -14,6 +14,8 @@ const {
 } = useDetectDevice;
 
 const App = () => {
+  const deviceOrientation = useDeviceOrientation();
+  console.log('deviceOrientation', deviceOrientation); // PORTRAIT or LANDSCAPE
   return (
     <ScrollView>
       <SafeAreaView style={styles.container}>
