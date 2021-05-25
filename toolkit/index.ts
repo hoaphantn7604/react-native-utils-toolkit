@@ -1,6 +1,6 @@
 import { NativeModules, Dimensions, Platform } from 'react-native';
 import { UseDetectDevice, UseScale } from './type';
-import { devicesWithNotch } from './devicesWithNotch'
+import { devicesWithNotch } from './devicesWithNotch';
 
 const { UtilsToolkit } = NativeModules;
 const { checkTablet, checkSmallDevice,

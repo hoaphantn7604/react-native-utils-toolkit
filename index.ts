@@ -1,2 +1,3 @@
 import {useDetectDevice, useScale} from './toolkit';
-export {useDetectDevice, useScale};
+import {useDeviceOrientation} from './toolkit/useDeviceOrientation';
+export {useDetectDevice, useScale, useDeviceOrientation};
