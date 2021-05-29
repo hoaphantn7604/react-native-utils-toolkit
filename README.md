@@ -8,6 +8,14 @@
 
 `$ cd ios && pod install`
 
+### Jest setup
+```js
+    jest.mock('react-native-utils-toolkit', () => {
+        const UtilsToolkit = require('react-native-utils-toolkit/mock');
+        return UtilsToolkit;
+    });
+```
+
 ## Usage
 ```js
     import React from 'react';
