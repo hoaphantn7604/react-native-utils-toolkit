@@ -1,5 +1,5 @@
 # react-native-utils-toolkit
-
+Make UI flexible on various screen sizes.
 ## Getting started
 
 `$ yarn add react-native-utils-toolkit`
