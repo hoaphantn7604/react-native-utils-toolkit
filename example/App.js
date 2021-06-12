@@ -1,6 +1,10 @@
 import React from 'react';
 import {SafeAreaView, ScrollView, StyleSheet, Text, View} from 'react-native';
-import {useDetectDevice, useScale, useDeviceOrientation} from 'react-native-utils-toolkit';
+import {
+  useDetectDevice,
+  useScale,
+  useDeviceOrientation,
+} from 'react-native-utils-toolkit';
 const {scale, fontScale} = useScale;
 const {
   deviceInch,
