@@ -1,7 +1,7 @@
 {
   "name": "react-native-utils-toolkit",
   "title": "React Native Utils Toolkit",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Make UI flexible on various screen sizes.",
   "main": "index.ts",
   "scripts": {
