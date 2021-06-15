@@ -1,8 +1,13 @@
 # react-native-utils-toolkit
 Toolkit makes the UI more perfect on many screen sizes.
 ## Getting started
-
-`$ yarn add react-native-utils-toolkit`
+```js
+    yarn add react-native-utils-toolkit
+```
+or
+```js
+    npm i react-native-utils-toolkit
+```
 
 ### Start IOS
 
