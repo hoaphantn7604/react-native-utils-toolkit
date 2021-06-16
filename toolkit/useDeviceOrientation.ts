@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from 'react';
-import { Dimensions, ScaledSize } from 'react-native';
+import { Dimensions } from 'react-native';
 
-const screen = Dimensions.get('screen');
+const screen = Dimensions.get('window');
 
 export function useDeviceOrientation() {
   const isOrientationPortrait = ({
@@ -24,20 +24,26 @@ export function useDeviceOrientation() {
     landscape: isOrientationLandscape(screen),
   });
 
-  const onChange = useCallback(({ screen: scr }: { screen: ScaledSize }) => {
+  const onChange = useCallback((screen) => {
     setOrientation({
-      portrait: isOrientationPortrait(scr),
-      landscape: isOrientationLandscape(scr),
+      portrait: isOrientationPortrait(screen),
+      landscape: isOrientationLandscape(screen),
     });
   }, []);
 
   useEffect(() => {
-    Dimensions.addEventListener('change', onChange);
+    Dimensions.addEventListener('change', () => {
+      const screen = Dimensions.get('window');
+      onChange(screen);
+    });
 
     return () => {
-      Dimensions.removeEventListener('change', onChange);
+      Dimensions.removeEventListener('change', ()=>{
+        const screen = Dimensions.get('window');
+        onChange(screen);
+      });
     };
-  }, [orientation.portrait, orientation.landscape, onChange]);
-  
+  }, []);
+
   return orientation.portrait === true ? 'PORTRAIT' : 'LANDSCAPE';
 }
