@@ -4,6 +4,7 @@ import {
   useDetectDevice,
   useScale,
   useDeviceOrientation,
+  useBackHandler,
 } from 'react-native-utils-toolkit';
 const {scale, fontScale} = useScale;
 const {
@@ -20,6 +21,11 @@ const {
 const App = () => {
   const deviceOrientation = useDeviceOrientation();
   console.log('deviceOrientation', deviceOrientation); // PORTRAIT or LANDSCAPE
+
+  useBackHandler(() => {
+    console.log('On go back');
+  });
+
   return (
     <ScrollView>
       <SafeAreaView style={styles.container}>

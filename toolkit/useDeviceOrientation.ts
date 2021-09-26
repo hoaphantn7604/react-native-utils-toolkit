@@ -3,7 +3,7 @@ import { Dimensions } from 'react-native';
 
 const screen = Dimensions.get('window');
 
-export function useDeviceOrientation() {
+function useDeviceOrientation() {
   const isOrientationPortrait = ({
     width,
     height,
@@ -47,3 +47,6 @@ export function useDeviceOrientation() {
 
   return orientation.portrait === true ? 'PORTRAIT' : 'LANDSCAPE';
 }
+
+
+export default useDeviceOrientation;

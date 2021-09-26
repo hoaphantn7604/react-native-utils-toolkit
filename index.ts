@@ -1,5 +1,7 @@
-import { useDetectDevice, useScale } from './toolkit';
-import { useDeviceOrientation } from './toolkit/useDeviceOrientation';
+import useScale from './toolkit/ueScale';
+import useDetectDevice from './toolkit/useDetectDevice';
+import useDeviceOrientation from './toolkit/useDeviceOrientation';
+import useBackHandler from './toolkit/useBackHandler';
 
 const { 
     deviceInch, 
@@ -27,5 +29,6 @@ export {
     isTablet, 
     width, 
     fontScale, 
-    scale
+    scale,
+    useBackHandler
 };

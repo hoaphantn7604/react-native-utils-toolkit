@@ -32,6 +32,7 @@ or
   - width: screen width.
   - height: screen height.
   - useDeviceOrientation: device orientation detection.
+  - useBackHandler: hardwareBackPress detection.
 
 ## Usage
 ```js
