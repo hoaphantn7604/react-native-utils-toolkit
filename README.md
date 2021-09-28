@@ -21,19 +21,22 @@ or
     });
 ```
 ### Documents
-  - scale: make UI flexible on various screen sizes.
-  - fontScale: make font size flexible on various screen sizes.
-  - deviceInch: inch of device.
-  - hasNotch: tells if the device is a has notch.
-  - isAndroid: tells if the device is Android operating system.
-  - isIOS: tells if the device is IOS operating system.
-  - isSmallDevice: tells the device has a screen size smaller than 4.8 inches.
-  - isTablet: tells if the device is a tablet.
-  - width: screen width.
-  - height: screen height.
-  - useDeviceOrientation: device orientation detection.
-  - useBackHandler: detects hardware button presses for back navigation.
-  - useAppState: can tell you if the app is in the foreground or background, and notify you when the state changes.
+| API                | Type                 | Description                                                             | 
+| ------------------ | -------------------- | ----------------------------------------------------------------------- |
+| scale              | Function             | Make UI flexible on various screen sizes.                               |
+| fontScale          | Function             | Make font size flexible on various screen sizes.                        |
+| deviceInch         | Number               | Inch of device                                                          |
+| hasNotch           | Boolean              | Tells if the device is a has notch.                                     |
+| isAndroid          | Boolean              | Tells if the device is Android operating system.                        |
+| isIOS              | Boolean              | Tells if the device is IOS operating system.                            |
+| isSmallDevice      | Boolean              | Tells the device has a screen size smaller than 4.8 inches.             |
+| isTablet           | Boolean              | Tells if the device is a tablet.                                        |
+| width              | Number               | Screen width.                                                           |
+| height             | Number               | Screen height.                                                          |
+|useDeviceOrientation| Hooks API            | Device orientation detection.                                           |
+| useBackHandler     | Hooks API            | Detects hardware button presses for back navigation.                    |
+| useAppState        | Hooks API            | Can tell you if the app is in the foreground or background, and notify you when the state changes. |
+
 
 ## Usage
 ```js
