@@ -1,23 +1,12 @@
-import { useEffect, useState, useCallback } from 'react';
+import { DependencyList, EffectCallback, useEffect } from 'react';
 import { BackHandler } from 'react-native';
 
-function useBackHandler(callback?: () => void) {
+function useBackHandler(effect: EffectCallback, deps?: DependencyList) {
     useEffect(() => {
-        BackHandler.addEventListener('hardwareBackPress', () => {
-            if (callback) {
-                callback();
-            }
-            return true;
-        });
+        BackHandler.addEventListener('hardwareBackPress', effect)
+        return () => BackHandler.removeEventListener('hardwareBackPress', effect)
 
-        return BackHandler.removeEventListener('hardwareBackPress', () => {
-            if (callback) {
-                callback();
-            }
-            return true;
-        })
-
-    }, []);
+    }, deps);
 }
 
 export default useBackHandler;

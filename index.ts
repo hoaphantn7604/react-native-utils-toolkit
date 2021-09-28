@@ -2,6 +2,7 @@ import useScale from './toolkit/ueScale';
 import useDetectDevice from './toolkit/useDetectDevice';
 import useDeviceOrientation from './toolkit/useDeviceOrientation';
 import useBackHandler from './toolkit/useBackHandler';
+import useAppState from './toolkit/useAppState';
 
 const { 
     deviceInch, 
@@ -30,5 +31,6 @@ export {
     width, 
     fontScale, 
     scale,
-    useBackHandler
+    useBackHandler,
+    useAppState
 };

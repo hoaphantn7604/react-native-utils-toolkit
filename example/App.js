@@ -1,10 +1,11 @@
 import React from 'react';
 import {SafeAreaView, ScrollView, StyleSheet, Text, View} from 'react-native';
 import {
-  useDetectDevice,
-  useScale,
-  useDeviceOrientation,
   useBackHandler,
+  useAppState,
+  useDetectDevice,
+  useDeviceOrientation,
+  useScale,
 } from 'react-native-utils-toolkit';
 const {scale, fontScale} = useScale;
 const {
@@ -23,8 +24,12 @@ const App = () => {
   console.log('deviceOrientation', deviceOrientation); // PORTRAIT or LANDSCAPE
 
   useBackHandler(() => {
-    console.log('On go back');
-  });
+    console.log('On goback');
+  }, []);
+
+  useAppState(state => {
+    console.log('App State', state);
+  }, []);
 
   return (
     <ScrollView>

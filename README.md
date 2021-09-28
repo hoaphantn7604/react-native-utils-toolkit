@@ -32,13 +32,14 @@ or
   - width: screen width.
   - height: screen height.
   - useDeviceOrientation: device orientation detection.
-  - useBackHandler: hardwareBackPress detection.
+  - useBackHandler: detects hardware button presses for back navigation.
+  - useAppState: can tell you if the app is in the foreground or background, and notify you when the state changes.
 
 ## Usage
 ```js
     import React from 'react';
     import {SafeAreaView, ScrollView, StyleSheet, Text, View} from 'react-native';
-    import {useDetectDevice, useScale, useDeviceOrientation} from 'react-native-utils-toolkit';
+    import {useBackHandler, useAppState, useDetectDevice, useScale, useDeviceOrientation} from 'react-native-utils-toolkit';
     
     const {scale, fontScale} = useScale;
     const {
@@ -55,6 +56,14 @@ or
     const App = () => {
         const deviceOrientation = useDeviceOrientation();
         console.log('deviceOrientation', deviceOrientation); // PORTRAIT or LANDSCAPE
+
+        useBackHandler(() => {
+            console.log('On goback');
+        }, []);
+
+        useAppState(state => {
+            console.log('App State', state);
+        }, []);
         
         return (
             <ScrollView>
