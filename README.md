@@ -1,9 +1,6 @@
 # react-native-utils-toolkit
 Provide solutions to make your app flexible for different screen sizes, different devices.
 
-#### Source code demo
-- [react-native-template-components](https://github.com/hoaphantn7604/react-native-template-components) A beautiful template for React Native.
-
 ## Getting started
 ```js
     yarn add react-native-utils-toolkit
@@ -41,6 +38,8 @@ or
 | useBackHandler     | Hooks API            | Detects hardware button presses for back navigation.                    |
 | useAppState        | Hooks API            | Can tell you if the app is in the foreground or background, and notify you when the state changes. |
 
+#### Source code demo
+- [react-native-template-components](https://github.com/hoaphantn7604/react-native-template-components) A beautiful template for React Native.
 
 ## Usage
 ```js
