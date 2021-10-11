@@ -1,7 +1,7 @@
 {
   "name": "react-native-utils-toolkit",
   "title": "React Native Utils Toolkit",
-  "version": "1.2.7",
+  "version": "1.2.10",
   "description": "Toolkit makes the UI more perfect on many screen sizes.",
   "main": "index.ts",
   "scripts": {
@@ -15,14 +15,16 @@
   "keywords": [
     "react-native",
     "scale",
-    "font-scale",
-    "check-tablet",
-    "check-small-device",
-    "has-notch",
-    "device-inch",
-    "device-orientation",
-    "back-handler",
-    "app-state"
+    "scaling",
+    "size matter",
+    "size matters",
+    "check tablet",
+    "check small device",
+    "has notch",
+    "device inch",
+    "device orientation",
+    "back handler",
+    "app state"
   ],
   "author": {
     "name": "Hoa Phan",
