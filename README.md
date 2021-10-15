@@ -12,6 +12,11 @@ or
     npm i react-native-utils-toolkit
 ```
 
+### RN Version < 0.60
+```js
+    react-native link react-native-utils-toolkit
+```
+
 ### Run IOS
 ```js
     cd ios && pod install
