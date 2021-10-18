@@ -3,6 +3,7 @@ import useDetectDevice from './toolkit/useDetectDevice';
 import useDeviceOrientation from './toolkit/useDeviceOrientation';
 import useBackHandler from './toolkit/useBackHandler';
 import useAppState from './toolkit/useAppState';
+import useValidation from './toolkit/useValidation';
 
 const { 
     deviceInch, 
@@ -21,6 +22,9 @@ export {
     useDetectDevice, 
     useScale, 
     useDeviceOrientation, 
+    useBackHandler,
+    useAppState,
+    useValidation,
     deviceInch, 
     hasNotch, 
     height, 
@@ -31,6 +35,5 @@ export {
     width, 
     fontScale, 
     scale,
-    useBackHandler,
-    useAppState
+
 };
