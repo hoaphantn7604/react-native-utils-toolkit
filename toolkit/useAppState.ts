@@ -2,10 +2,12 @@ import { DependencyList, useEffect } from 'react';
 import { AppState } from 'react-native';
 
 function useAppState(effect: (state: string) => void, deps?: DependencyList) {
-    useEffect(() => {
-        AppState.addEventListener('change', effect);
-        return () => AppState.removeEventListener('change', effect);
-    }, deps);
+  useEffect(() => {
+    const susbcription = AppState.addEventListener('change', effect);
+    return () => {
+      susbcription.remove();
+    };
+  }, deps);
 }
 
 export default useAppState;
