@@ -5,7 +5,11 @@ function useBackHandler(effect: EffectCallback, deps?: DependencyList) {
   useEffect(() => {
     const susbcription = BackHandler.addEventListener('hardwareBackPress', effect)
     return () => {
-      susbcription.remove();
+      if (susbcription?.remove) {
+        susbcription.remove();
+      } else {
+        BackHandler.removeEventListener('hardwareBackPress', effect);
+      }
     };
   }, deps);
 }
