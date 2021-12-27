@@ -3,12 +3,18 @@ import { BackHandler } from 'react-native';
 
 function useBackHandler(effect: EffectCallback, deps?: DependencyList) {
   useEffect(() => {
-    const susbcription = BackHandler.addEventListener('hardwareBackPress', effect)
+    const susbcription = BackHandler.addEventListener('hardwareBackPress', () => {
+      effect();
+      return true;
+    })
     return () => {
       if (susbcription?.remove) {
         susbcription.remove();
       } else {
-        BackHandler.removeEventListener('hardwareBackPress', effect);
+        BackHandler.removeEventListener('hardwareBackPress', ()=>{
+          effect();
+          return true;
+        });
       }
     };
   }, deps);
