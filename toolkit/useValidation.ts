@@ -46,6 +46,17 @@ const useValidation = {
       return true;
     }
     return false;
+  },
+  validateConsecutiveNumber: (arr: any[]) => {
+    const differenceAry = arr.slice(1).map((n: any, i: number) => {
+      return n - arr[i];
+    });
+    const isDifference = differenceAry.every(value => value === 1);
+
+    return isDifference;
+  },
+  validateSameValue: (arr: string[]) => {
+    return arr.filter((item, index) => arr.indexOf(item) !== index).length === arr.length - 1;
   }
 }
 export default useValidation;
