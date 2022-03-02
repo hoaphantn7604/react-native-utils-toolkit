@@ -4,6 +4,7 @@ import useDeviceOrientation from './toolkit/useDeviceOrientation';
 import useBackHandler from './toolkit/useBackHandler';
 import useAppState from './toolkit/useAppState';
 import useValidation from './toolkit/useValidation';
+import useArray from './toolkit/useArray';
 
 const { 
     deviceInch, 
@@ -25,6 +26,7 @@ export {
     useBackHandler,
     useAppState,
     useValidation,
+    useArray,
     deviceInch, 
     hasNotch, 
     height, 
