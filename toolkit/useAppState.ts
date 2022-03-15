@@ -5,7 +5,7 @@ function useAppState(effect: (state: string) => void, deps?: DependencyList) {
   useEffect(() => {
     const susbcription = AppState.addEventListener('change', effect);
     return () => {
-      if (susbcription?.remove) {
+      if (typeof susbcription?.remove === 'function') {
         susbcription.remove();
       } else {
         AppState.removeEventListener('change', effect);

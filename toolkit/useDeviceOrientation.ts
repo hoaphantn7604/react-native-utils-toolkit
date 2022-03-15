@@ -38,7 +38,7 @@ function useDeviceOrientation() {
     });
 
     return () => {
-      if (susbcription?.remove) {
+      if (typeof susbcription?.remove === 'function') {
         susbcription.remove();
       } else {
         Dimensions.removeEventListener('change', ()=>{

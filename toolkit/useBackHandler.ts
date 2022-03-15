@@ -8,7 +8,7 @@ function useBackHandler(effect: EffectCallback, deps?: DependencyList) {
       return true;
     })
     return () => {
-      if (susbcription?.remove) {
+      if (typeof susbcription?.remove === 'function') {
         susbcription.remove();
       } else {
         BackHandler.removeEventListener('hardwareBackPress', ()=>{
