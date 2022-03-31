@@ -1,7 +1,7 @@
 {
   "name": "react-native-utils-toolkit",
   "title": "React Native Utils Toolkit",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "Toolkit makes the UI more perfect on many screen sizes.",
   "main": "index.ts",
   "scripts": {
