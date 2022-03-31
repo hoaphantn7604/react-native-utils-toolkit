@@ -8,7 +8,9 @@ function useBackHandler(effect: EffectCallback, deps?: DependencyList) {
       return true;
     })
     return () => {
+      // @ts-expect-error - React Native >= 0.65
       if (typeof susbcription?.remove === 'function') {
+        // @ts-expect-error - need update @types/react-native@0.65.x
         susbcription.remove();
       } else {
         BackHandler.removeEventListener('hardwareBackPress', ()=>{
