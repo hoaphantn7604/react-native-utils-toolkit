@@ -7,35 +7,35 @@ import useValidation from './toolkit/useValidation';
 import useArray from './toolkit/useArray';
 
 const {
-    deviceInch,
-    hasNotch,
-    height,
-    isAndroid,
-    isIOS,
-    isSmallDevice,
-    isTablet,
-    width
+  deviceInch,
+  hasNotch,
+  height,
+  isAndroid,
+  isIOS,
+  isSmallDevice,
+  isTablet,
+  width
 } = useDetectDevice;
 
 const { fontScale, scale } = useScale;
 
 export {
-    useDetectDevice,
-    useScale,
-    useDeviceOrientation,
-    useBackHandler,
-    useAppState,
-    useValidation,
-    useArray,
-    deviceInch,
-    hasNotch,
-    height,
-    isAndroid,
-    isIOS,
-    isSmallDevice,
-    isTablet,
-    width,
-    fontScale,
-    scale,
+  useDetectDevice,
+  useScale,
+  useDeviceOrientation,
+  useBackHandler,
+  useAppState,
+  useValidation,
+  useArray,
+  deviceInch,
+  hasNotch,
+  height,
+  isAndroid,
+  isIOS,
+  isSmallDevice,
+  isTablet,
+  width,
+  fontScale,
+  scale,
 
 };

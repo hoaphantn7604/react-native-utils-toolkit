@@ -1,5 +1,5 @@
 import { NativeModules, PixelRatio } from 'react-native';
-import { UseScale } from './type';
+import { IUseScale } from './model';
 
 const { UtilsToolkit } = NativeModules;
 const {
@@ -9,7 +9,7 @@ const {
 
 const getFontScale = PixelRatio.getFontScale();
 
-const useScale: UseScale = {
+const useScale: IUseScale = {
   fontScale: (number: number = 1) => {
     const value = (deviceInch + (getFontScale + 1.5)) / 10;
     const scale = number * Number(value.toFixed(1));
